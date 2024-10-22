@@ -1,0 +1,4 @@
+id,variable,reference,target
+SNI_oxy_vs_Sham_Sal,condition,SNI_oxy,Sham_Sal
+Sham_oxy_vs_Sham_Sal,condition,Sham_oxy,Sham_Sal
+SNI_Sal_vs_Sham_Sal,condition,SNI_Sal,Sham_Sal
