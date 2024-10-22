@@ -1,0 +1,19 @@
+# Use the slim version of the Debian operating system
+FROM --platform=linux/amd64 debian:bullseye-slim
+
+# Metadata as described
+LABEL image.author.name="jessiemidgley"
+LABEL image.author.email="yourmail"
+
+# Install dependencies: update package list and install curl
+RUN apt-get update && \
+    apt-get install -y curl tar && \
+    apt-get clean
+
+# Download and install Salmon
+RUN curl -L https://github.com/COMBINE-lab/salmon/releases/download/v1.5.2/salmon-1.5.2_linux_x86_64.tar.gz -o salmon.tar.gz && \
+    tar -xzf salmon.tar.gz -C /usr/bin && \
+    rm salmon.tar.gz
+
+# Set the PATH environment variable
+ENV PATH="/usr/bin/salmon-1.5.2_linux_x86_64/bin/:${PATH}"
