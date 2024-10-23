@@ -1,4 +1,4 @@
-# Computational Workflows Practical Couurse
+# Computational Workflows Practical Course
 This directory contains the Jupyter notebooks and additional files from each day of the course.
 
 ## Final Project
